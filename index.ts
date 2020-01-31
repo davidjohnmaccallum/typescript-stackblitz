@@ -1,6 +1,3 @@
-// Import stylesheets
-import './style.css';
+import { fromEvent } from 'rxjs';
 
-// Write TypeScript code!
-const appDiv: HTMLElement = document.getElementById('app');
-appDiv.innerHTML = `<h1>TypeScript Starter</h1>`;
+fromEvent(document, 'click').subscribe(() => console.log('Clicked!!'));
